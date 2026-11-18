@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architektura" id="Architektura">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Diagram architektury – system sprzedaży biletów na wydarzenia" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="150" y="10" width="1000" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klient" value="Klient" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="130" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="org" value="Organizator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="285" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="Administrator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="440" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="front" value="&lt;b&gt;Aplikacja webowa (frontend)&lt;/b&gt;&lt;br&gt;responsywny interfejs&lt;br&gt;komputer i telefon&lt;br&gt;uruchamiana w przeglądarce" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="back" value="Serwer aplikacji (backend) – REST API" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fillColor=#f8f8f8;strokeColor=#333333;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="490" y="70" width="440" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="&lt;b&gt;Uwierzytelnianie&lt;/b&gt;&lt;br&gt;logowanie, role,&lt;br&gt;hasła hashowane" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="110" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="konta" value="&lt;b&gt;Konta użytkowników&lt;/b&gt;&lt;br&gt;rejestracja, zatwierdzanie&lt;br&gt;organizatorów" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="715" y="110" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wyd" value="&lt;b&gt;Wydarzenia&lt;/b&gt;&lt;br&gt;tworzenie, edycja,&lt;br&gt;weryfikacja przez admina" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="195" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bilety" value="&lt;b&gt;Bilety i zamówienia&lt;/b&gt;&lt;br&gt;rezerwacja, przypisanie&lt;br&gt;biletu do klienta" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="715" y="195" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zgl" value="&lt;b&gt;Zgłoszenia&lt;/b&gt;&lt;br&gt;kontakt z administracją,&lt;br&gt;ręczne przypisanie biletu" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="280" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="stat" value="&lt;b&gt;Statystyki sprzedaży&lt;/b&gt;&lt;br&gt;dla organizatora" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="715" y="280" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dao" value="&lt;b&gt;Warstwa dostępu do danych&lt;/b&gt;&lt;br&gt;transakcje – brak podwójnej sprzedaży biletu" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="380" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="integr" value="&lt;b&gt;Integracja płatności&lt;/b&gt;&lt;br&gt;obsługa wyniku płatności" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="470" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cron" value="&lt;b&gt;Zadania cykliczne&lt;/b&gt;&lt;br&gt;zwalnianie wygasłych&lt;br&gt;rezerwacji" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="715" y="470" width="195" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" value="&lt;b&gt;Zewnętrzny system płatności&lt;/b&gt;&lt;br&gt;(atrapa – osobna strona,&lt;br&gt;zwraca: sukces / błąd)" style="rounded=1;arcSize=10;dashed=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="472.5" y="650" width="270" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="&lt;b&gt;Relacyjna baza danych&lt;/b&gt;&lt;br&gt;użytkownicy, wydarzenia,&lt;br&gt;pule biletów, bilety,&lt;br&gt;zamówienia, zgłoszenia" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="340" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bkp" value="&lt;b&gt;Kopia zapasowa bazy&lt;/b&gt;&lt;br&gt;przechowywana min. 7 dni" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="590" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="leg" value="&lt;b&gt;Legenda&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="960" y="70" width="310" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_box" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="975" y="102" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_box_t" value="moduł / komponent systemu" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="102" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_ext" value="" style="rounded=1;arcSize=10;dashed=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="975" y="136" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_ext_t" value="system zewnętrzny" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="136" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_db" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="980" y="166" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_db_t" value="magazyn danych" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="169" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="975" y="215" width="1" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="215" width="1" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_a_t" value="komunikacja synchroniczna (HTTPS)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="203" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="975" y="250" width="1" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="250" width="1" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lg_d_t" value="przekierowanie / zadanie okresowe" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="238" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="" style="endArrow=none;html=1;edgeStyle=none;" edge="1" parent="1" source="klient" target="front">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="endArrow=none;html=1;edgeStyle=none;" edge="1" parent="1" source="org" target="front">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=none;html=1;edgeStyle=none;" edge="1" parent="1" source="admin" target="front">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="HTTPS&lt;br&gt;REST / JSON" style="startArrow=classic;endArrow=classic;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="front" target="back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="SQL" style="startArrow=classic;endArrow=classic;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dao" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="automatyczny&lt;br&gt;backup 1× na dobę" style="endArrow=classic;dashed=1;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="db" target="bkp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="przekierowanie&lt;br&gt;do strony płatności" style="endArrow=classic;dashed=1;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="front" target="pay">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="255" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="wynik płatności&lt;br&gt;(callback HTTPS)" style="endArrow=classic;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pay" target="integr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="startArrow=classic;endArrow=classic;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="p1" target="p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" style="endArrow=classic;dashed=1;html=1;edgeStyle=none;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="p3" target="p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
